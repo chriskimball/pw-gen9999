@@ -35,15 +35,17 @@ console.log(specialChar);
 // console.log(isExecuted);
 
   //alert will always be undefined
-  console.log(alert( "A message" ));
+  // console.log(alert( "A message" ));
   //promopt will alwasys return a string
-  console.log(prompt( "Give me some info"))
+  // console.log(prompt( "Give me some info"))
   //confirm will always return boolean
-  console.log(confirm( "A yes / no choice"))
+  // console.log(confirm( "A yes / no choice"))
 
 
 function generatePassword(){
   //prmopt user how long password should be
+  var passwordLength = prompt("How Long do you want your password to be?")
+  console.log(passwordLength)
   // if password length is blank, return
   // if password length is not a number, return
   // if pw length is < 8, return

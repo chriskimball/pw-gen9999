@@ -22,21 +22,6 @@ var specialChar = {
   isIncluded:true
 };
 
-//smaller the function the better
-//on button click start passwordParameters function
-
-//alerts
-// let isExecuted = confirm("Are you sure to execute this action?");
-// console.log(isExecuted);
-
-  //alert will always be undefined
-  // console.log(alert( "A message" ));
-  //promopt will alwasys return a string
-  // console.log(prompt( "Give me some info"))
-  //confirm will always return boolean
-  // console.log(confirm( "A yes / no choice"))
-
-
 function generatePassword(){
   //prmopt user how long password should be
   var passwordLength = prompt("How Long do you want your password to be?")
@@ -84,20 +69,18 @@ function generatePassword(){
   // after user input gathered create blank array that contains a string from all other arrays for requested input
   var includedChar = [];
   
-  // if any of user alerts are true, include in generatePassword
+  // this function will add the user input object to includedValue if the isIncluded property is true
   function includedArray(includedValue) {
     if (includedValue.isIncluded) {
       return includedChar.push(includedValue)
     }
   }
   
+  // if any of user alerts are true, include in generatePassword
   includedArray(numbers);
   includedArray(lowerLetters);
   includedArray(upperLetters);
   includedArray(specialChar);
-
-  console.log(includedChar)
-
   
   // this function will randomly select an index value for the given array
   var indexPointer = ""

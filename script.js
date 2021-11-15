@@ -72,9 +72,20 @@ function generatePassword(){
   numbers.isIncluded= confirm("Should Numbers be included?");
 
   console.log(numbers.isIncluded);
+
   // alert user whether lower case should be included
+  lowerLetters.isIncluded= confirm("Should lower case letters be included?");
+
+  console.log(lowerLetters.isIncluded);
+
   // alert user whether upper case should be included
+  upperLetters.isIncluded= confirm("Should upper case letters be included?");
+
+  console.log(upperLetters.isIncluded);
   // alert user whether special characters should be included
+  specialChar.isIncluded= confirm("Should special characters be included?");
+
+  console.log(specialChar.isIncluded);
   // repeating code should be cosolidated
   // if all user alerts are false, return
   // if any of user alerts are true, include in generatePassword

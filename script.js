@@ -59,7 +59,6 @@ function generatePassword(){
   // alert user whether special characters should be included
   specialChar.isIncluded= confirm("Should special characters be included?");
 
-  // repeating code should be cosolidated
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
@@ -98,7 +97,6 @@ function generatePassword(){
   };
 
   return password;
-
 } 
 
 // Write password to the #password input

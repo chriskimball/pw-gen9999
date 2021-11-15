@@ -1,18 +1,30 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// global password variable
-var password = "";
+// number object
+var numbers = {
+  values:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  isIncluded: true
+};
+// lower case letter object
+var lowerLetters = {
+  values:["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
+  isIncluded: true
+};
+// upper case letter object
+var upperLetters = {
+  values: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+  isIncluded:true
+};
+// special character object
+var specialChar = {
+  values: [" ","!",`"`,"#","$","%","&",`’`,"(",")","*","+", `,`,"-",".","/",":",";","<","=",">","?","@","[",`\\`,"]","_","`","{","|","}","~"],
+  isIncluded:true
+};
 
-// number array
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// lower case letter array
-var lowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-// upper case letter array
-var upperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-// special character array
-var specialChar = [" ","!",`"`,"#","$","%","&","U+0027","(",")","*","+","U+002C","-",".","/",":",";","<","=",">","?","@","[","U+005C","]","_","`","{","|","}","~"];
-
+console.log(numbers);
+console.log(lowerLetters);
+console.log(upperLetters);
 console.log(specialChar);
 
 //smaller the function the better
@@ -21,6 +33,14 @@ console.log(specialChar);
 //alerts
 // let isExecuted = confirm("Are you sure to execute this action?");
 // console.log(isExecuted);
+
+  //alert will always be undefined
+  console.log(alert( "A message" ));
+  //promopt will alwasys return a string
+  console.log(prompt( "Give me some info"))
+  //confirm will always return boolean
+  console.log(confirm( "A yes / no choice"))
+
 
 function generatePassword(){
   //prmopt user how long password should be
@@ -43,16 +63,36 @@ function generatePassword(){
   // add items at random into another array
 
 
-  //declare password to an empty data string
-  password = "";
+  //declare password to an empty data string and empty array for selected characters
+  var password = "";
+  var characters = []
 
   console.log('generate a password.');
   
-  //appending password with new character
-  //shorthand for password = password + "a";
-  //for loop to loop until password is desired length
-  //need strategy to randomly select values for our arrays
-  //build a string, one character at a time
+  // appending password with new character
+  // shorthand for password = password + "a";
+  // need strategy to randomly select values for our arrays
+  // build a string, one character at a time
+  // for loop to repeat, first selecting a random character and then appending it to string
+  // for loop to loop until password is desired length
+
+  // when working on logic of pw generator work with hard coded values and not user input values, comment out the gathering value logic after
+  var passwordLength = 10;
+  var isNumber = true; //confirm("do you want numbers?") true
+  
+  // you could start prebuilding the password with one of each of the selections before start randomly filling in characters in the for loop at the bottom
+  if (isNumber) {
+    // password +=
+    characters = characters.concat(numbers);
+  }
+
+  var isLower = false;
+  var isUpper = false;
+  var isSpecial = true;
+
+
+
+  // select an available character
   password += "a";
   password += "s";
   password += "g";

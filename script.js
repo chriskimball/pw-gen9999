@@ -88,13 +88,21 @@ function generatePassword(){
   console.log(specialChar.isIncluded);
   // repeating code should be cosolidated
   // if all user alerts are false, return
-  if (!numbers.included && !lowerLetters.isIncluded && !upperLetters.isIncluded && !specialChar.isIncluded) {
+  if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
     return
   }
-
+  
   // if any of user alerts are true, include in generatePassword
   // if any of user alerts are false, exclude from generatePassword
+
+  var includedChar = [];
+
+  if (numbers.isIncluded) {
+    includedChar.push(numbers)
+  };
+  console.log(includedChar)
+
 
   // after user input gathered create blank array that contains a string from all other arrays for requested input
   

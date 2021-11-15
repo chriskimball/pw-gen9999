@@ -91,16 +91,24 @@ function generatePassword(){
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
     return
-  }
-  
+  };
+
   // if any of user alerts are true, include in generatePassword
   // if any of user alerts are false, exclude from generatePassword
 
   var includedChar = [];
 
-  if (numbers.isIncluded) {
-    includedChar.push(numbers)
-  };
+  function includedArray(includedValue) {
+    if (includedValue.isIncluded) {
+      return includedChar.push(includedValue)
+    }
+  }
+  
+  includedArray(numbers);
+  includedArray(lowerLetters);
+  includedArray(upperLetters);
+  includedArray(specialChar);
+  
   console.log(includedChar)
 
 

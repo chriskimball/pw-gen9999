@@ -104,39 +104,14 @@ function generatePassword(){
   function indexFinder (array) {
     indexPointer = Math.floor( Math.random() * array.length);
     return indexPointer;
-  }
-
-// console.log (includedChar[indexPointer].values.length)
-//  console.log (indexFinder(includedChar)[indexFinder(includedChar)]);
- console.log (includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))]);
-
- // console.log(indexFinder(includedChar)," + ", indexFinder(includedChar[indexPointer].value));
-  //declare password to an empty data string and empty array for selected characters
+  };
   var password = "";
-
-  console.log('generate a password.');
   
-  // add items at random into another array
+  // for loop to add characters from user selection to repeat until given password length
+  for (var i=0; i < passwordLength; i++) {
+    password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
+  };
 
-  // appending password with new character
-  // shorthand for password = password + "a";
-  // need strategy to randomly select values for our arrays
-  // build a string, one character at a time
-  // for loop to repeat, first selecting a random character and then appending it to string
-  // for loop to loop until password is desired length
-
-  // when working on logic of pw generator work with hard coded values and not user input values, comment out the gathering value logic after
- 
-  // you could start prebuilding the password with one of each of the selections before start randomly filling in characters in the for loop at the bottom
-
-  // select an available character
-  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
-  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
-  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
-  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
-  password += "g";
-
-  //return password 
   return password;
 
 } 

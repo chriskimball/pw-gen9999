@@ -24,27 +24,27 @@ var specialChar = {
 
 function generatePassword(){
   //prmopt user how long password should be
-  var passwordLength = prompt("How Long do you want your password to be?")
+  var passwordLength = prompt("How Long do you want your password to be?");
   
   // if password length is blank, return
   if (passwordLength == "") {
     alert("You need to enter a number between 8 and 128.")
-    return
+    return placeholder="Your Secure Password";
   } 
   // if password length is not a number, return
   else if (isNaN(passwordLength)) {
     alert("You must enter a number between 8 and 128.")
-    return
+    return placeholder="Your Secure Password";
   }
   // if pw length is < 8, return
   else if (passwordLength < 8) {
     alert("Your password must be 8 or more characters long.")
-    return
+    return placeholder="Your Secure Password";
   } 
   // if pw length is > 128, return  
   else if (passwordLength > 128) {
     alert("Your password cannot be longer than 128 characters.")
-    return
+    return placeholder="Your Secure Password";
   };
  
   // alert user whether numbers should be included
@@ -63,13 +63,13 @@ function generatePassword(){
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
-    return placeholder="Your Secure Password"
+    return placeholder="Your Secure Password";
   };
 
   // after user input gathered create blank array that contains a string from all other arrays for requested input
   var includedChar = [];
   
-  // this function will add the user input object to includedValue if the isIncluded property is true
+  // this function will add the object to includedValue if the isIncluded property is true based off user input
   function includedArray(includedValue) {
     if (includedValue.isIncluded) {
       return includedChar.push(includedValue)
@@ -87,7 +87,9 @@ function generatePassword(){
   function indexFinder (array) {
     indexPointer = Math.floor( Math.random() * array.length);
     return indexPointer;
-  };
+  }
+
+  // declaring a blank password
   var password = "";
   
   // for loop to add characters from user selection to repeat until given password length

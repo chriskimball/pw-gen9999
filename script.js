@@ -101,8 +101,6 @@ function generatePassword(){
 
 } 
 
-
-//WE DONT NEED TO MODIFY CODE BELOW THIS COMMENT
 // Write password to the #password input
 function writePassword() {
   //assigning password variable

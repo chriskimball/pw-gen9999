@@ -63,7 +63,7 @@ function generatePassword(){
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
-    return
+    return placeholder="Your Secure Password"
   };
 
   // after user input gathered create blank array that contains a string from all other arrays for requested input

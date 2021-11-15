@@ -22,11 +22,6 @@ var specialChar = {
   isIncluded:true
 };
 
-console.log(numbers);
-console.log(lowerLetters);
-console.log(upperLetters);
-console.log(specialChar);
-
 //smaller the function the better
 //on button click start passwordParameters function
 
@@ -66,26 +61,19 @@ function generatePassword(){
     alert("Your password cannot be longer than 128 characters.")
     return
   };
-  console.log(passwordLength)
-  
+ 
   // alert user whether numbers should be included
   numbers.isIncluded= confirm("Should Numbers be included?");
-
-  console.log(numbers.isIncluded);
 
   // alert user whether lower case should be included
   lowerLetters.isIncluded= confirm("Should lower case letters be included?");
 
-  console.log(lowerLetters.isIncluded);
-
   // alert user whether upper case should be included
   upperLetters.isIncluded= confirm("Should upper case letters be included?");
 
-  console.log(upperLetters.isIncluded);
   // alert user whether special characters should be included
   specialChar.isIncluded= confirm("Should special characters be included?");
 
-  console.log(specialChar.isIncluded);
   // repeating code should be cosolidated
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
@@ -93,11 +81,10 @@ function generatePassword(){
     return
   };
 
-  // if any of user alerts are true, include in generatePassword
-  // if any of user alerts are false, exclude from generatePassword
-
+  // after user input gathered create blank array that contains a string from all other arrays for requested input
   var includedChar = [];
-
+  
+  // if any of user alerts are true, include in generatePassword
   function includedArray(includedValue) {
     if (includedValue.isIncluded) {
       return includedChar.push(includedValue)
@@ -108,21 +95,29 @@ function generatePassword(){
   includedArray(lowerLetters);
   includedArray(upperLetters);
   includedArray(specialChar);
-  
+
   console.log(includedChar)
 
-
-  // after user input gathered create blank array that contains a string from all other arrays for requested input
   
-  // add items at random into another array
+  // this function will randomly select an index value for the given array
+  var indexPointer = ""
+  function indexFinder (array) {
+    indexPointer = Math.floor( Math.random() * array.length);
+    return indexPointer;
+  }
 
+// console.log (includedChar[indexPointer].values.length)
+//  console.log (indexFinder(includedChar)[indexFinder(includedChar)]);
+ console.log (includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))]);
 
+ // console.log(indexFinder(includedChar)," + ", indexFinder(includedChar[indexPointer].value));
   //declare password to an empty data string and empty array for selected characters
   var password = "";
-  var characters = []
 
   console.log('generate a password.');
   
+  // add items at random into another array
+
   // appending password with new character
   // shorthand for password = password + "a";
   // need strategy to randomly select values for our arrays
@@ -131,24 +126,14 @@ function generatePassword(){
   // for loop to loop until password is desired length
 
   // when working on logic of pw generator work with hard coded values and not user input values, comment out the gathering value logic after
-  var passwordLength = 10;
-  var isNumber = true; //confirm("do you want numbers?") true
-  
+ 
   // you could start prebuilding the password with one of each of the selections before start randomly filling in characters in the for loop at the bottom
-  if (isNumber) {
-    // password +=
-    characters = characters.concat(numbers);
-  }
-
-  var isLower = false;
-  var isUpper = false;
-  var isSpecial = true;
-
-
 
   // select an available character
-  password += "a";
-  password += "s";
+  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
+  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
+  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
+  password += includedChar[indexFinder(includedChar)].values[(indexFinder(includedChar[indexPointer].values))];
   password += "g";
 
   //return password 

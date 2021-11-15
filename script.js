@@ -46,7 +46,16 @@ function generatePassword(){
   //prmopt user how long password should be
   var passwordLength = prompt("How Long do you want your password to be?")
   console.log(passwordLength)
+
   // if password length is blank, return
+  if (passwordLength == "") {
+  alert("You need to enter a number between 8 and 128")
+    return
+  } else if (isNaN(passwordLength)) {
+    alert("You must enter a number between 8 and 128")
+    return
+  }
+
   // if password length is not a number, return
   // if pw length is < 8, return
   // if pw length is > 128, return

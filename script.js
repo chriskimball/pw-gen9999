@@ -29,22 +29,22 @@ function generatePassword(){
   // if password length is blank, return
   if (passwordLength == "") {
     alert("You need to enter a number between 8 and 128.")
-    return placeholder="Your Secure Password";
+    return "";
   } 
   // if password length is not a number, return
   else if (isNaN(passwordLength)) {
     alert("You must enter a number between 8 and 128.")
-    return placeholder="Your Secure Password";
+    return "";
   }
   // if pw length is < 8, return
   else if (passwordLength < 8) {
     alert("Your password must be 8 or more characters long.")
-    return placeholder="Your Secure Password";
+    return "";
   } 
   // if pw length is > 128, return  
   else if (passwordLength > 128) {
     alert("Your password cannot be longer than 128 characters.")
-    return placeholder="Your Secure Password";
+    return "";
   };
  
   // alert user whether numbers should be included
@@ -62,7 +62,7 @@ function generatePassword(){
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {
     alert("You must include at least one character type.")
-    return placeholder="Your Secure Password";
+    return "";
   };
 
   // after user input gathered create blank array that contains a string from all other arrays for requested input

@@ -44,6 +44,10 @@ The user can run this password generator as many times as they want without havi
 ![Screenshot of Horseon Social Services Website](./assets/screenshot.png)
 
 
+### External Resources
+* [List of special characters included in application](https://www.owasp.org/index.php/Password_special_characters "Password Special Characters")
+
+
 ### Copyright Info
 ---------------
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

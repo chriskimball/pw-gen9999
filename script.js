@@ -48,16 +48,16 @@ function generatePassword(){
   };
  
   // alert user whether numbers should be included
-  numbers.isIncluded= confirm("Should Numbers be included?");
+  numbers.isIncluded = confirm("Should Numbers be included?");
 
   // alert user whether lower case should be included
-  lowerLetters.isIncluded= confirm("Should lower case letters be included?");
+  lowerLetters.isIncluded = confirm("Should lower case letters be included?");
 
   // alert user whether upper case should be included
-  upperLetters.isIncluded= confirm("Should upper case letters be included?");
+  upperLetters.isIncluded = confirm("Should upper case letters be included?");
 
   // alert user whether special characters should be included
-  specialChar.isIncluded= confirm("Should special characters be included?");
+  specialChar.isIncluded = confirm("Should special characters be included?");
 
   // if all user alerts are false, return
   if ((!numbers.isIncluded) && (!lowerLetters.isIncluded) && (!upperLetters.isIncluded) && (!specialChar.isIncluded)) {

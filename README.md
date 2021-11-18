@@ -19,11 +19,11 @@ If the user chooses a password length value outside of the minimum/maximum lengt
 
 If the user chooses not to include all four character types (numbers/lower/upper/special characters) then they will be alerted that they need to pick at least one character type and have to re-run the application.
 
-Each character type that the user opts to include in their password will be randomly selected and then once the random character type is selected a random character from within the character type will be randomly added to the password. The application will repeat this process until the password length has been reached, which will be returned to the user.
+Each character type that the user opts to include in their password will be randomly selected and then once the random character type is selected a random character from within the character type will be added to the password. The application will repeat this process until the password length has been reached, which will then be returned to the user.
 
-This extra level of randomization will add additional security to the password as each character type will have an equal probability of being added regardless of the number of characters in a given character type (i.e. there are only 10 numbers versus 26 characters).
+This extra level of randomization will add additional security to the password as each character type will have an equal probability of being added regardless of the number of characters in a given character type (i.e. there are only 10 numbers versus 26 characters in the alphabet).
 
-The user can run this password generator as many times as they want without having to refresh the page and will continue to be served different passwords.
+The user can run this password generator as many times as they want without having to refresh the page and they will continue to be served different passwords.
 
 ### Web addresses
 ---------------
